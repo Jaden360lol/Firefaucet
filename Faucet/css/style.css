@@ -1,0 +1,433 @@
+@import "https://fonts.googleapis.com/css?family=VT323";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+
+/* Add a black background color to the top navigation */
+
+
+#logo {
+     margin: auto;
+    border-radius: 20%;
+    box-sizing: border-box;
+  
+    max-width: 90%% 
+    
+}
+
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+.topnav {
+    background-color: #151027;
+    overflow: hidden;
+    height: 20px;
+    text-align: center;
+}
+
+
+/* Style the links inside the navigation bar */
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: poppins;
+}
+
+
+/* Change the color of links on hover */
+
+.topnav a:hover {
+    background-color: #ecf0f3;
+    color: black;
+}
+
+
+/* Add a color to the active/current link */
+
+.topnav a.active {
+    background-color: #ff5c12;
+    color: white;
+}
+
+div {
+    background-color: rgba(255, 255, 0, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 25% auto 25%;
+    grid-gap: 10px;
+    background-color: transparent;
+    top: 70% ;
+    padding-top: 50px;
+    margin-top: 10px;
+    right: 60% ;
+	height: auto;
+	margin-bottom: 100px;
+}
+
+
+
+.mushroom .coin {
+    z-index: 2;
+}
+
+.item2 {
+    grid-row: 2 / span 2;
+    background-color: transparent;
+}
+
+.item3 {
+    grid-row: 1 / span 2;
+    z-index: 20;
+    position: relative;
+    width: 2%;
+    height: 2%;
+    border-radius: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: whitesmoke;
+    margin: auto;
+    /*box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;*/
+}
+
+.tabs {
+    height:30%;
+    width:35%;
+    background-color: #11111;
+    margin-right:0% ;
+    
+    
+}
+
+#main:hover{
+background-color:gray ;    
+} 
+#stats:hover{
+background-color:gray ;    
+} 
+#donate:hover{
+background-color:gray ;    
+} 
+.black {
+background-color:#4C4C4C ;    
+  height:100%;  
+  width:85% ;
+   margin-left:7.5% ;
+   margin-top:10% ;
+   
+}
+
+
+
+
+#main {
+    background-color: black ;
+    color: white ;
+    border:50px  ;
+    border-color:red ;
+    height:56%;
+    width: 83.5%;
+    right: 60px;
+    font: ;
+    margin-bottom:1% ;
+     font-size:100% ;
+     
+}
+
+#stats {
+    background-color: black ;
+    color: white ;
+    border:50px  ;
+    border-color:red ;
+     height:56%;
+    width: 83.5%;
+    right: 60px;
+    font-size:100%;
+    margin-bottom:1% ;
+}
+
+#donate {
+    background-color: black ;
+    color: white ;
+    border:50px  ;
+    border-color:red ;
+     height:56%;
+    width: 83.5%;
+    right: 60px;
+    font-weight: 100 ;
+    z-index: auto ;
+    font-size:100%;
+    text-overflow:100% ;
+}
+#ducoUsername {
+    text-align: center;
+    
+    width: 83%;
+    right: 1%;
+   
+    margin-left:10% ;
+    margin-right:2% ;
+    margin-top:-5% ;
+}
+
+
+
+label,
+.input,
+getDucosButton {
+   
+    width: 30%;
+   
+    border: none;
+    outline: none;
+   
+     margin-left:30% ;
+     margin-top:20% ;
+}
+
+label {
+    margin-bottom: 4px;
+}
+
+label:nth-of-type(2) {
+    margin-top: 12px;
+}
+
+.input::placeholder {
+    color:#f1f1f1;
+}
+ 
+.input {
+    background: #ababab;
+    top:70%;
+    right: 90% ;
+    height: 50px;
+    font-size: 14px;
+    border-radius: 50px;
+    width: 100% ;
+    margin-right:20% ;
+    
+    
+}
+
+.getDucosButton {
+    margin-top: 20px;
+    background: #2b70d7;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 900;
+    
+    transition: 0.5s;
+    font-style: #151027;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: auto;
+}
+
+.btn {
+    width: 120px;
+    align-content: center;
+    text-align: center
+}
+
+
+
+
+.title {
+    top: 20%;
+    font-weight: bolder;
+    font-size: 1.6rem;
+    color: #151027;
+    letter-spacing: 1px;
+    font-family: Comic Sans MS;
+    text-shadow:110px ;
+}
+
+.footer {
+    margin: 10px;
+    font-size: small;
+    background-color: transparent;
+    color: #ff5c12;
+}
+
+.rpanel {
+    height: 40%;
+    align-content:center;
+    text-align: center;
+    font-family: poppins;
+    font-size: 0.8rem;
+    background-color: gray;
+
+	position:absolute  ;
+	width:60% ;
+	margin-left:35%;
+	margin-top:1% ;
+	margin-right:2% ;
+	
+   
+	
+}
+
+/*.g-recaptcha {
+    align-content: center;
+    text-align: center;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+	height: 8%;
+}*/
+
+div {
+    background-color: transparent;
+}
+
+.rpanel2 {
+    height: 40%;
+    align-content:center;
+    text-align: center;
+    font-family: poppins;
+    font-size: 0.8rem;
+    background-color: gray;
+
+	position:absolute  ;
+	width:60% ;
+	margin-left:35%;
+	margin-top:3% ;
+	
+    
+    
+}
+
+
+/* 
+     Q: Why, why you did this?
+     A: I just wanna play a test match.
+     */
+
+
+
+/* making things tidy :D */
+
+html,
+body {
+    padding: 0;
+	background: radial-gradient(ellipse at bottom, #828282 0%, #5E5E5E 100%);
+    margin: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background);
+	overflow: hidden;
+}
+
+body::before,
+body::after {
+    content: "";
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+html,
+body,
+body::before,
+body::after {
+    display: block;
+}
+
+
+/* layer - background */
+
+
+
+/* layer - foreground (LCD Display) */
+
+
+
+/* Cheesy animation ;P */
+
+@keyframes msg {
+    to {
+        text-indent: var(--msg-indent-end);
+    }
+}
+
+@keyframes blink {
+    to {
+        background-image: linear-gradient(90deg, var(--color43) calc(11 * var(--unit)), transparent 1px), var(--insertion-indicator), var(--insertion-indicator), var(--insertion-indicator), var(--insertion-indicator);
+    }
+}
+
+
+/* Chromium Specific CSS against bad rendering */
+
+@supports (backdrop-filter: blur(5px)) {
+     :root {
+        --main-body-smooth-radius: calc(10 * var(--unit));
+        --circle-radius: 9;
+        --ss-r-1: calc(7 * var(--unit));
+        --ss-r-2: calc(6.4 * var(--unit));
+        --ss-r-3: calc(7 * var(--unit));
+        --ss-r-4: calc(9 * var(--unit));
+        --ss-r-5: calc(15 * var(--unit));
+        --ss-r-6: calc(13 * var(--unit));
+        --ss-r-7: calc(9 * var(--unit));
+        --ss-rp-8: 65.1%;
+        --ss-r-9: calc(9 * var(--unit));
+        --ss-r-10: calc(52 * var(--unit));
+        --ss-r-11: calc(9 * var(--unit));
+        --ss-r-12: calc(16 * var(--unit));
+        --ss-r-13: calc(12 * var(--unit));
+        --circ: 52%;
+        --circ2: 37%;
+        --ss-r-14: calc(15 * var(--unit));
+        --ss-r-15: calc(10 * var(--unit));
+        --ss-r-16: calc(20 * var(--unit));
+        --ss-r-17: calc(19 * var(--unit));
+        --ss-r-18: calc(3.3 * var(--unit));
+        --circ3: 27%;
+        --ss-r-19: calc(6 * var(--unit));
+        --circle-outline-radius: 38%;
+        --ss-r-20: calc(7 * var(--unit));
+        --round-rect: 68.9%;
+        --ss-r-21: calc(8 * var(--unit));
+        --ss-r-23: 54% 65%;
+    }
+}
+#playButton {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border: none;
+    background: none;
+    box-shadow: none;
+    cursor: pointer;
+    outline: none;
+}
+
+/* That's all ;) */
+/* Ok! -Jaden360lol */

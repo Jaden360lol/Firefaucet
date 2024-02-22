@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stormsurge Duco Faucet</title>
+</head>
+<body>
+
+<h1>Stormsurge Duco Faucet</h1>
+<!--🎁 <strong>Total Distributed:</strong> <span id="totalDistributed">Loading...</span> Ducos <br>-->
+<p>
+    💳 <strong>Faucet Wallet Balance:</strong> <span id="walletBalance">Loading...</span> Ducos <br>
+    💵 <strong>Last Transaction:</strong> <span id="lastTransaction">Loading...</span> <br>
+    🎯 <strong>Goal To Distribute Until The End of the Week:</strong> <span id="goalToDistribute">Loading...</span> Ducos
+</p>
+
+<p>
+    <em>Last Updated: <span id="lastUpdated">Loading...</span></em><br>
+</p>
+
+<script>
+    // Function to fetch data from the API
+    async function fetchData(url) {
+        const response = await fetch(url);
+        const data = await response.json();
+        return data;
+    }
+
+    // Function to update the HTML with fetched data
+    async function updateData() {
+        const apiUrl = 'https://server.duinocoin.com/users/DuckyPolice'; // Replace 'your_username' with the actual username
+
+        // Fetch user data
+        const userData = await fetchData(apiUrl);
+        const balance = userData.result.balance.balance;
+        const transactions = userData.result.transactions;
+        const lastTransaction = transactions.length > 0 ? transactions[0] : null;
+
+        // Update HTML elements
+        document.getElementById('walletBalance').innerText = balance.toFixed(4);
+        //document.getElementById('totalDistributed').innerText = '20.5'; // Replace with actual total distributed
+        document.getElementById('lastTransaction').innerText = lastTransaction ?
+            `${lastTransaction.datetime} ${lastTransaction.amount} DUCO ${lastTransaction.sender} (${lastTransaction.id}) UTC-2` :
+            'N/A';
+        document.getElementById('goalToDistribute').innerText = '500'; // Replace with actual goal to distribute
+
+        // Fetch and update last updated time
+        const now = new Date();
+        const lastUpdatedTime = `${now.toLocaleDateString('en-US')} at ${now.toLocaleTimeString('en-US')}`;
+        document.getElementById('lastUpdated').innerText = lastUpdatedTime;
+        document.getElementById('lastUpdateTime').innerText = now.toLocaleTimeString('en-US', { timeZone: 'America/Sao_Paulo' });
+    }
+
+    // Update data when the page loads
+    window.onload = updateData;
+</script>
+
+</body>
+</html>
