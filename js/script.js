@@ -26,7 +26,7 @@ function getDucos() {
 			location.reload();
             alert('Unsuccessful Transaction.');
 		} else if (response.status === 200) {
-            alert("10 DUCO has been added to your account!");
+            alert("1 DUCO has been added to your account!");
 			location.reload();
         } else if (response.ok) {
             return response.text();
