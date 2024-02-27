@@ -13,7 +13,7 @@ function getDucos() {
     var ducoUsername = document.getElementById("ducoUsername").value;
      //document.getElementById("spinner").innerHTML = '<div class="loader"></div>';
 
-    fetch('jaden360lol.pythonanywhere.com/transaction/' + ducoUsername, {
+    fetch('https://jaden360lol.pythonanywhere.com/transaction/' + ducoUsername, {
         method: 'GET'
     })
     .then(response => {
