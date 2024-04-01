@@ -13,7 +13,7 @@ function formValidation() {
 function getDucos() {
     var ducoUsername = document.getElementById("ducoUsername").value;
 
-    fetch('http://jaden360lol.pythonanywhere.com/transaction/' + ducoUsername, {
+    fetch('https://jaden360lol.pythonanywhere.com/transaction/' + ducoUsername, {
         method: 'GET'
     })
     .then(response => {
