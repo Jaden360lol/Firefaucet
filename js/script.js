@@ -1,3 +1,4 @@
+
 // quick validation form
 function formValidation() {
     var userName = document.getElementById("ducoUsername");
@@ -11,29 +12,26 @@ function formValidation() {
 
 function getDucos() {
     var ducoUsername = document.getElementById("ducoUsername").value;
-     //document.getElementById("spinner").innerHTML = '<div class="loader"></div>';
 
-    fetch('https://jaden360lol.pythonanywhere.com/transaction/' + ducoUsername, {
+    fetch('http://jaden360lol.pythonanywhere.com/transaction/' + ducoUsername, {
         method: 'GET'
     })
     .then(response => {
-        if (response.status === 419) {
-            console.log("Wait 15 minutes for the cooldown to end");
-            alert("Wait 15 minutes for the cooldown to end");
-			location.reload();
-        } else if (response.status === 400) {
-            console.error('Unsuccessful Transaction.');
-			location.reload();
-            alert('Unsuccessful Transaction.');
-		} else if (response.status === 200) {
-            alert("1 DUCO has been added to your account!");
-			location.reload();
-        } else if (response.ok) {
-            return response.text();
+        if (response.status != 404) {
+            return response.text(); // Return the text promise
         } else {
             console.error('Network response was not ok');
             return Promise.reject('Network response was not ok');
-			location.reload();
-    }
-})}
-// Nice Javascript!! -Jaden360lol
+        }
+    })
+    .then(text => {
+        alert(text); // Handle the text content here
+        // Add other logic as needed
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        location.reload();
+    });
+}
+
+`
